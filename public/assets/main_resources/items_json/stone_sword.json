@@ -1,0 +1,8 @@
+﻿{
+    "id":  "stone_sword",
+    "texture":  "/assets/main_resources/items/stone_sword.png",
+    "width":  6,
+    "height":  15,
+    "scale":  2.1333
+}
+

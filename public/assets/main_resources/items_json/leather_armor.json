@@ -1,0 +1,8 @@
+﻿{
+    "id":  "leather_armor",
+    "texture":  "/assets/main_resources/items/leather_armor.png",
+    "width":  64,
+    "height":  64,
+    "scale":  0.5
+}
+

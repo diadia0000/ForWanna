@@ -1,0 +1,348 @@
+{
+    "id":  "monster.tengu_blue",
+    "texture":  "/assets/main_resources/monster/TenguBlue/Walk.png",
+    "width":  82,
+    "height":  82,
+    "scale":  2,
+    "anchor":  {
+                   "x":  0.5,
+                   "y":  1
+               },
+    "offset":  {
+                   "x":  0,
+                   "y":  12
+               },
+    "ui":  {
+               "hpBarY":  16
+           },
+    "animations":  {
+                       "IDLE":  {
+                                    "DOWN":  [
+                                                 {
+                                                     "texture":  "/assets/main_resources/monster/TenguBlue/Idle.png",
+                                                     "x":  0,
+                                                     "y":  0,
+                                                     "width":  68,
+                                                     "height":  68,
+                                                     "duration":  7
+                                                 },
+                                                 {
+                                                     "texture":  "/assets/main_resources/monster/TenguBlue/Idle.png",
+                                                     "x":  68,
+                                                     "y":  0,
+                                                     "width":  68,
+                                                     "height":  68,
+                                                     "duration":  7
+                                                 },
+                                                 {
+                                                     "texture":  "/assets/main_resources/monster/TenguBlue/Idle.png",
+                                                     "x":  136,
+                                                     "y":  0,
+                                                     "width":  68,
+                                                     "height":  68,
+                                                     "duration":  7
+                                                 },
+                                                 {
+                                                     "texture":  "/assets/main_resources/monster/TenguBlue/Idle.png",
+                                                     "x":  204,
+                                                     "y":  0,
+                                                     "width":  68,
+                                                     "height":  68,
+                                                     "duration":  7
+                                                 },
+                                                 {
+                                                     "texture":  "/assets/main_resources/monster/TenguBlue/Idle.png",
+                                                     "x":  272,
+                                                     "y":  0,
+                                                     "width":  68,
+                                                     "height":  68,
+                                                     "duration":  7
+                                                 },
+                                                 {
+                                                     "texture":  "/assets/main_resources/monster/TenguBlue/Idle.png",
+                                                     "x":  340,
+                                                     "y":  0,
+                                                     "width":  68,
+                                                     "height":  68,
+                                                     "duration":  7
+                                                 }
+                                             ]
+                                },
+                       "MOVE":  {
+                                    "DOWN":  [
+                                                 {
+                                                     "texture":  "/assets/main_resources/monster/TenguBlue/Walk.png",
+                                                     "x":  0,
+                                                     "y":  0,
+                                                     "width":  82,
+                                                     "height":  82,
+                                                     "duration":  5
+                                                 },
+                                                 {
+                                                     "texture":  "/assets/main_resources/monster/TenguBlue/Walk.png",
+                                                     "x":  82,
+                                                     "y":  0,
+                                                     "width":  82,
+                                                     "height":  82,
+                                                     "duration":  5
+                                                 },
+                                                 {
+                                                     "texture":  "/assets/main_resources/monster/TenguBlue/Walk.png",
+                                                     "x":  164,
+                                                     "y":  0,
+                                                     "width":  82,
+                                                     "height":  82,
+                                                     "duration":  5
+                                                 },
+                                                 {
+                                                     "texture":  "/assets/main_resources/monster/TenguBlue/Walk.png",
+                                                     "x":  246,
+                                                     "y":  0,
+                                                     "width":  82,
+                                                     "height":  82,
+                                                     "duration":  5
+                                                 },
+                                                 {
+                                                     "texture":  "/assets/main_resources/monster/TenguBlue/Walk.png",
+                                                     "x":  328,
+                                                     "y":  0,
+                                                     "width":  82,
+                                                     "height":  82,
+                                                     "duration":  5
+                                                 },
+                                                 {
+                                                     "texture":  "/assets/main_resources/monster/TenguBlue/Walk.png",
+                                                     "x":  410,
+                                                     "y":  0,
+                                                     "width":  82,
+                                                     "height":  82,
+                                                     "duration":  5
+                                                 },
+                                                 {
+                                                     "texture":  "/assets/main_resources/monster/TenguBlue/Walk.png",
+                                                     "x":  492,
+                                                     "y":  0,
+                                                     "width":  82,
+                                                     "height":  82,
+                                                     "duration":  5
+                                                 },
+                                                 {
+                                                     "texture":  "/assets/main_resources/monster/TenguBlue/Walk.png",
+                                                     "x":  574,
+                                                     "y":  0,
+                                                     "width":  82,
+                                                     "height":  82,
+                                                     "duration":  5
+                                                 },
+                                                 {
+                                                     "texture":  "/assets/main_resources/monster/TenguBlue/Walk.png",
+                                                     "x":  656,
+                                                     "y":  0,
+                                                     "width":  82,
+                                                     "height":  82,
+                                                     "duration":  5
+                                                 },
+                                                 {
+                                                     "texture":  "/assets/main_resources/monster/TenguBlue/Walk.png",
+                                                     "x":  738,
+                                                     "y":  0,
+                                                     "width":  82,
+                                                     "height":  82,
+                                                     "duration":  5
+                                                 }
+                                             ]
+                                },
+                       "HIT":  {
+                                   "DOWN":  [
+                                                {
+                                                    "texture":  "/assets/main_resources/monster/TenguBlue/Hit.png",
+                                                    "x":  0,
+                                                    "y":  0,
+                                                    "width":  68,
+                                                    "height":  68,
+                                                    "duration":  4
+                                                },
+                                                {
+                                                    "texture":  "/assets/main_resources/monster/TenguBlue/Hit.png",
+                                                    "x":  68,
+                                                    "y":  0,
+                                                    "width":  68,
+                                                    "height":  68,
+                                                    "duration":  4
+                                                },
+                                                {
+                                                    "texture":  "/assets/main_resources/monster/TenguBlue/Hit.png",
+                                                    "x":  136,
+                                                    "y":  0,
+                                                    "width":  68,
+                                                    "height":  68,
+                                                    "duration":  4
+                                                },
+                                                {
+                                                    "texture":  "/assets/main_resources/monster/TenguBlue/Hit.png",
+                                                    "x":  204,
+                                                    "y":  0,
+                                                    "width":  68,
+                                                    "height":  68,
+                                                    "duration":  4
+                                                },
+                                                {
+                                                    "texture":  "/assets/main_resources/monster/TenguBlue/Hit.png",
+                                                    "x":  272,
+                                                    "y":  0,
+                                                    "width":  68,
+                                                    "height":  68,
+                                                    "duration":  4
+                                                },
+                                                {
+                                                    "texture":  "/assets/main_resources/monster/TenguBlue/Hit.png",
+                                                    "x":  340,
+                                                    "y":  0,
+                                                    "width":  68,
+                                                    "height":  68,
+                                                    "duration":  4
+                                                },
+                                                {
+                                                    "texture":  "/assets/main_resources/monster/TenguBlue/Hit.png",
+                                                    "x":  408,
+                                                    "y":  0,
+                                                    "width":  68,
+                                                    "height":  68,
+                                                    "duration":  4
+                                                },
+                                                {
+                                                    "texture":  "/assets/main_resources/monster/TenguBlue/Hit.png",
+                                                    "x":  476,
+                                                    "y":  0,
+                                                    "width":  68,
+                                                    "height":  68,
+                                                    "duration":  4
+                                                }
+                                            ]
+                               },
+                       "ATTACK":  {
+                                      "DOWN":  [
+                                                   {
+                                                       "texture":  "/assets/main_resources/monster/TenguBlue/Attack.png",
+                                                       "x":  0,
+                                                       "y":  0,
+                                                       "width":  82,
+                                                       "height":  82,
+                                                       "duration":  3
+                                                   },
+                                                   {
+                                                       "texture":  "/assets/main_resources/monster/TenguBlue/Attack.png",
+                                                       "x":  82,
+                                                       "y":  0,
+                                                       "width":  82,
+                                                       "height":  82,
+                                                       "duration":  3
+                                                   },
+                                                   {
+                                                       "texture":  "/assets/main_resources/monster/TenguBlue/Attack.png",
+                                                       "x":  164,
+                                                       "y":  0,
+                                                       "width":  82,
+                                                       "height":  82,
+                                                       "duration":  3
+                                                   },
+                                                   {
+                                                       "texture":  "/assets/main_resources/monster/TenguBlue/Attack.png",
+                                                       "x":  246,
+                                                       "y":  0,
+                                                       "width":  82,
+                                                       "height":  82,
+                                                       "duration":  3
+                                                   },
+                                                   {
+                                                       "texture":  "/assets/main_resources/monster/TenguBlue/Attack.png",
+                                                       "x":  328,
+                                                       "y":  0,
+                                                       "width":  82,
+                                                       "height":  82,
+                                                       "duration":  3
+                                                   },
+                                                   {
+                                                       "texture":  "/assets/main_resources/monster/TenguBlue/Attack.png",
+                                                       "x":  410,
+                                                       "y":  0,
+                                                       "width":  82,
+                                                       "height":  82,
+                                                       "duration":  3
+                                                   },
+                                                   {
+                                                       "texture":  "/assets/main_resources/monster/TenguBlue/Attack.png",
+                                                       "x":  492,
+                                                       "y":  0,
+                                                       "width":  82,
+                                                       "height":  82,
+                                                       "duration":  3
+                                                   },
+                                                   {
+                                                       "texture":  "/assets/main_resources/monster/TenguBlue/Attack.png",
+                                                       "x":  574,
+                                                       "y":  0,
+                                                       "width":  82,
+                                                       "height":  82,
+                                                       "duration":  3
+                                                   },
+                                                   {
+                                                       "texture":  "/assets/main_resources/monster/TenguBlue/Attack.png",
+                                                       "x":  656,
+                                                       "y":  0,
+                                                       "width":  82,
+                                                       "height":  82,
+                                                       "duration":  3
+                                                   },
+                                                   {
+                                                       "texture":  "/assets/main_resources/monster/TenguBlue/Attack.png",
+                                                       "x":  738,
+                                                       "y":  0,
+                                                       "width":  82,
+                                                       "height":  82,
+                                                       "duration":  3
+                                                   },
+                                                   {
+                                                       "texture":  "/assets/main_resources/monster/TenguBlue/Attack.png",
+                                                       "x":  820,
+                                                       "y":  0,
+                                                       "width":  82,
+                                                       "height":  82,
+                                                       "duration":  3
+                                                   },
+                                                   {
+                                                       "texture":  "/assets/main_resources/monster/TenguBlue/Attack.png",
+                                                       "x":  902,
+                                                       "y":  0,
+                                                       "width":  82,
+                                                       "height":  82,
+                                                       "duration":  3
+                                                   },
+                                                   {
+                                                       "texture":  "/assets/main_resources/monster/TenguBlue/Attack.png",
+                                                       "x":  984,
+                                                       "y":  0,
+                                                       "width":  82,
+                                                       "height":  82,
+                                                       "duration":  3
+                                                   },
+                                                   {
+                                                       "texture":  "/assets/main_resources/monster/TenguBlue/Attack.png",
+                                                       "x":  1066,
+                                                       "y":  0,
+                                                       "width":  82,
+                                                       "height":  82,
+                                                       "duration":  3
+                                                   },
+                                                   {
+                                                       "texture":  "/assets/main_resources/monster/TenguBlue/Attack.png",
+                                                       "x":  1148,
+                                                       "y":  0,
+                                                       "width":  82,
+                                                       "height":  82,
+                                                       "duration":  3
+                                                   }
+                                               ]
+                                  }
+                   }
+}

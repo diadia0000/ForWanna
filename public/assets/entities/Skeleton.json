@@ -1,0 +1,43 @@
+{
+  "id": "monster.skeleton",
+  "texture": "/assets/main_resources/monster/skeleton/Run-Sheet.png",
+  "width": 64,
+  "height": 64,
+  "scale": 1.5,
+  "anchor": { "x": 0.5, "y": 1 },
+  "offset": { "x": 0, "y": 10 },
+  "ui": { "hpBarY": 12 },
+  "animations": {
+    "MOVE": {
+      "DOWN": [
+        { "x": 0, "y": 0, "duration": 5 },
+        { "x": 64, "y": 0, "duration": 5 },
+        { "x": 128, "y": 0, "duration": 5 },
+        { "x": 192, "y": 0, "duration": 5 },
+        { "x": 256, "y": 0, "duration": 5 },
+        { "x": 320, "y": 0, "duration": 5 }
+      ]
+    },
+    "IDLE": {
+      "DOWN": [
+        { "texture": "/assets/main_resources/monster/skeleton/Idle-Sheet.png", "x": 0, "y": 0, "width": 32, "height": 32, "duration": 9 },
+        { "texture": "/assets/main_resources/monster/skeleton/Idle-Sheet.png", "x": 32, "y": 0, "width": 32, "height": 32, "duration": 9 },
+        { "texture": "/assets/main_resources/monster/skeleton/Idle-Sheet.png", "x": 64, "y": 0, "width": 32, "height": 32, "duration": 9 },
+        { "texture": "/assets/main_resources/monster/skeleton/Idle-Sheet.png", "x": 96, "y": 0, "width": 32, "height": 32, "duration": 9 }
+      ]
+    },
+    "ATTACK": {
+      "DOWN": [
+        { "x": 64, "y": 0, "duration": 3 },
+        { "x": 128, "y": 0, "duration": 3 },
+        { "x": 192, "y": 0, "duration": 3 }
+      ]
+    },
+    "HIT": {
+      "DOWN": [
+        { "texture": "/assets/main_resources/monster/skeleton/Idle-Sheet.png", "x": 32, "y": 0, "width": 32, "height": 32, "duration": 4 },
+        { "texture": "/assets/main_resources/monster/skeleton/Idle-Sheet.png", "x": 64, "y": 0, "width": 32, "height": 32, "duration": 4 }
+      ]
+    }
+  }
+}

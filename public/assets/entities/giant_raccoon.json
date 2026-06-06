@@ -1,0 +1,172 @@
+{
+    "id":  "monster.giant_raccoon",
+    "texture":  "/assets/main_resources/monster/GiantRacoon/Idle.png",
+    "width":  60,
+    "height":  60,
+    "scale":  1.05,
+    "anchor":  {
+                   "x":  0.5,
+                   "y":  1
+               },
+    "offset":  {
+                   "x":  0,
+                   "y":  14
+               },
+    "ui":  {
+               "hpBarY":  20
+           },
+    "animations":  {
+                       "IDLE":  {
+                                    "DOWN":  [
+                                                 {
+                                                     "texture":  "/assets/main_resources/monster/GiantRacoon/Idle.png",
+                                                     "x":  0,
+                                                     "y":  0,
+                                                     "width":  60,
+                                                     "height":  60,
+                                                     "duration":  7
+                                                 },
+                                                 {
+                                                     "texture":  "/assets/main_resources/monster/GiantRacoon/Idle.png",
+                                                     "x":  60,
+                                                     "y":  0,
+                                                     "width":  60,
+                                                     "height":  60,
+                                                     "duration":  7
+                                                 },
+                                                 {
+                                                     "texture":  "/assets/main_resources/monster/GiantRacoon/Idle.png",
+                                                     "x":  120,
+                                                     "y":  0,
+                                                     "width":  60,
+                                                     "height":  60,
+                                                     "duration":  7
+                                                 },
+                                                 {
+                                                     "texture":  "/assets/main_resources/monster/GiantRacoon/Idle.png",
+                                                     "x":  180,
+                                                     "y":  0,
+                                                     "width":  60,
+                                                     "height":  60,
+                                                     "duration":  7
+                                                 },
+                                                 {
+                                                     "texture":  "/assets/main_resources/monster/GiantRacoon/Idle.png",
+                                                     "x":  240,
+                                                     "y":  0,
+                                                     "width":  60,
+                                                     "height":  60,
+                                                     "duration":  7
+                                                 },
+                                                 {
+                                                     "texture":  "/assets/main_resources/monster/GiantRacoon/Idle.png",
+                                                     "x":  300,
+                                                     "y":  0,
+                                                     "width":  60,
+                                                     "height":  60,
+                                                     "duration":  7
+                                                 }
+                                             ]
+                                },
+                       "MOVE":  {
+                                    "DOWN":  [
+                                                 {
+                                                     "texture":  "/assets/main_resources/monster/GiantRacoon/Jump.png",
+                                                     "x":  0,
+                                                     "y":  0,
+                                                     "width":  60,
+                                                     "height":  60,
+                                                     "duration":  5
+                                                 },
+                                                 {
+                                                     "texture":  "/assets/main_resources/monster/GiantRacoon/Jump.png",
+                                                     "x":  60,
+                                                     "y":  0,
+                                                     "width":  60,
+                                                     "height":  60,
+                                                     "duration":  5
+                                                 },
+                                                 {
+                                                     "texture":  "/assets/main_resources/monster/GiantRacoon/Jump.png",
+                                                     "x":  120,
+                                                     "y":  0,
+                                                     "width":  60,
+                                                     "height":  60,
+                                                     "duration":  5
+                                                 },
+                                                 {
+                                                     "texture":  "/assets/main_resources/monster/GiantRacoon/Jump.png",
+                                                     "x":  180,
+                                                     "y":  0,
+                                                     "width":  60,
+                                                     "height":  60,
+                                                     "duration":  5
+                                                 },
+                                                 {
+                                                     "texture":  "/assets/main_resources/monster/GiantRacoon/Jump.png",
+                                                     "x":  240,
+                                                     "y":  0,
+                                                     "width":  60,
+                                                     "height":  60,
+                                                     "duration":  5
+                                                 }
+                                             ]
+                                },
+                       "HIT":  {
+                                   "DOWN":  [
+                                                {
+                                                    "texture":  "/assets/main_resources/monster/GiantRacoon/Charge.png",
+                                                    "x":  0,
+                                                    "y":  0,
+                                                    "width":  60,
+                                                    "height":  60,
+                                                    "duration":  5
+                                                },
+                                                {
+                                                    "texture":  "/assets/main_resources/monster/GiantRacoon/Charge.png",
+                                                    "x":  60,
+                                                    "y":  0,
+                                                    "width":  60,
+                                                    "height":  60,
+                                                    "duration":  5
+                                                }
+                                            ]
+                               },
+                       "ATTACK":  {
+                                      "DOWN":  [
+                                                   {
+                                                       "texture":  "/assets/main_resources/monster/GiantRacoon/Attack.png",
+                                                       "x":  0,
+                                                       "y":  0,
+                                                       "width":  60,
+                                                       "height":  60,
+                                                       "duration":  4
+                                                   },
+                                                   {
+                                                       "texture":  "/assets/main_resources/monster/GiantRacoon/Attack.png",
+                                                       "x":  60,
+                                                       "y":  0,
+                                                       "width":  60,
+                                                       "height":  60,
+                                                       "duration":  4
+                                                   },
+                                                   {
+                                                       "texture":  "/assets/main_resources/monster/GiantRacoon/Attack.png",
+                                                       "x":  120,
+                                                       "y":  0,
+                                                       "width":  60,
+                                                       "height":  60,
+                                                       "duration":  4
+                                                   },
+                                                   {
+                                                       "texture":  "/assets/main_resources/monster/GiantRacoon/Attack.png",
+                                                       "x":  180,
+                                                       "y":  0,
+                                                       "width":  60,
+                                                       "height":  60,
+                                                       "duration":  4
+                                                   }
+                                               ]
+                                  }
+                   }
+}

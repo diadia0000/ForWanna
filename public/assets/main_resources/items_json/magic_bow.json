@@ -1,0 +1,8 @@
+﻿{
+    "id":  "magic_bow",
+    "texture":  "/assets/main_resources/items/magic_bow.png",
+    "width":  64,
+    "height":  64,
+    "scale":  0.5
+}
+

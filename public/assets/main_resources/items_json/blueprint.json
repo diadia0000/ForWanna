@@ -1,0 +1,8 @@
+﻿{
+    "id":  "blueprint",
+    "texture":  "/assets/main_resources/items/blueprint.png",
+    "width":  64,
+    "height":  64,
+    "scale":  0.5
+}
+

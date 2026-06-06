@@ -1,0 +1,8 @@
+﻿{
+    "id":  "wood_bow",
+    "texture":  "/assets/main_resources/items/wood_bow.png",
+    "width":  64,
+    "height":  64,
+    "scale":  0.5
+}
+

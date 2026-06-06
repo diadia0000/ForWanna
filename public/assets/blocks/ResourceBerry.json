@@ -1,0 +1,17 @@
+{
+  "id": "resource.berry",
+  "texture": "/assets/main_resources/blocks/crops.png",
+  "width": 32,
+  "height": 64,
+  "scale": 1.5,
+  "anchor": { "x": 0.5, "y": 1 },
+  "offset": { "x": 0, "y": 12 },
+  "ui": { "hpBarY": 18 },
+  "animations": {
+    "IDLE": {
+      "DOWN": [
+        { "x": 640, "y": 384, "duration": 12 }
+      ]
+    }
+  }
+}

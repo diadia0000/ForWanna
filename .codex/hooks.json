@@ -1,0 +1,16 @@
+{
+  "hooks": {
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash .codex/hooks/typecheck-on-stop.sh",
+            "statusMessage": "Type-checking + tests before wrap-up…",
+            "timeout": 120
+          }
+        ]
+      }
+    ]
+  }
+}

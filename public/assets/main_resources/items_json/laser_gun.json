@@ -1,0 +1,8 @@
+﻿{
+    "id":  "laser_gun",
+    "texture":  "/assets/main_resources/items/laser_gun.png",
+    "width":  64,
+    "height":  64,
+    "scale":  0.5
+}
+

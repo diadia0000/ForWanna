@@ -1,0 +1,43 @@
+{
+  "id": "player",
+  "texture": "/assets/main_resources/player/LionYellow/SeparateAnim/Walk.png",
+  "width": 16,
+  "height": 16,
+  "scale": 2.25,
+  "anchor": { "x": 0.5, "y": 1 },
+  "offset": { "x": 0, "y": 20 },
+  "animations": {
+    "MOVE": {
+      "DOWN": [
+        { "x": 0, "y": 0, "duration": 10 },
+        { "x": 0, "y": 16, "duration": 10 },
+        { "x": 0, "y": 32, "duration": 10 },
+        { "x": 0, "y": 48, "duration": 10 }
+      ],
+      "RIGHT": [
+        { "x": 48, "y": 0, "duration": 10 },
+        { "x": 48, "y": 16, "duration": 10 },
+        { "x": 48, "y": 32, "duration": 10 },
+        { "x": 48, "y": 48, "duration": 10 }
+      ],
+      "UP": [
+        { "x": 16, "y": 0, "duration": 10 },
+        { "x": 16, "y": 16, "duration": 10 },
+        { "x": 16, "y": 32, "duration": 10 },
+        { "x": 16, "y": 48, "duration": 10 }
+      ],
+      "LEFT": [
+        { "x": 32, "y": 0, "duration": 10 },
+        { "x": 32, "y": 16, "duration": 10 },
+        { "x": 32, "y": 32, "duration": 10 },
+        { "x": 32, "y": 48, "duration": 10 }
+      ]
+    },
+    "IDLE": {
+      "DOWN": [{ "x": 0, "y": 0 }],
+      "RIGHT": [{ "x": 48, "y": 0 }],
+      "UP": [{ "x": 16, "y": 0 }],
+      "LEFT": [{ "x": 32, "y": 0 }]
+    }
+  }
+}

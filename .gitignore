@@ -1,0 +1,34 @@
+# 依賴（每台機器自己裝）
+node_modules/
+peer-server/node_modules/
+
+# 編譯輸出
+dist/
+build/
+.cache/
+*.local
+
+# 系統垃圾
+.DS_Store
+desktop.ini
+Thumbs.db
+*.tmp
+~$*
+
+# 過大的素材包（需自行下載）
+public/assets/ninja-adventure/
+
+# Playwright MCP 暫存
+.playwright-mcp/
+
+# TypeScript 增量編譯快取
+*.tsbuildinfo
+
+# 本地編輯器設定
+.claude/launch.json
+
+*.log
+
+*.js
+*.py
+.env

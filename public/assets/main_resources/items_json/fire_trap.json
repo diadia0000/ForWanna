@@ -1,0 +1,8 @@
+﻿{
+    "id":  "fire_trap",
+    "texture":  "/assets/main_resources/items/fire_trap.png",
+    "width":  64,
+    "height":  64,
+    "scale":  0.5
+}
+

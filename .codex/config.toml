@@ -1,0 +1,16 @@
+# Forager MP — 專案級 Codex 設定
+#
+# 這份檔案放在 .codex/config.toml，Codex 會自動讀取（僅限 trusted 專案）。
+# 完整範例參閱 .codex/config.toml.example
+
+[features]
+codex_hooks = true
+
+# --- MCP servers ---------------------------------------------------------
+# codegraph：「多 agent 防踩踏」核心索引工具。放在專案層讓設定隨 repo 共享，
+# 不必每台機器各自設 ~/.codex/config.toml。CLI 需先裝好並在 PATH 上
+# （驗證：codegraph -V）。子代理另在各自 .codex/agents/*.toml 明確宣告。
+[mcp_servers.codegraph]
+command = "codegraph"
+args = ["serve", "--mcp"]
+startup_timeout_sec = 20

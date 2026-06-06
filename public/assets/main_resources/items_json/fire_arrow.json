@@ -1,0 +1,8 @@
+﻿{
+    "id":  "fire_arrow",
+    "texture":  "/assets/main_resources/items/fire_arrow.png",
+    "width":  64,
+    "height":  64,
+    "scale":  0.5
+}
+

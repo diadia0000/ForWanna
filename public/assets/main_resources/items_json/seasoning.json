@@ -1,0 +1,8 @@
+﻿{
+    "id":  "seasoning",
+    "texture":  "/assets/main_resources/items/seasoning.png",
+    "width":  64,
+    "height":  64,
+    "scale":  0.5
+}
+

@@ -1,0 +1,17 @@
+{
+  "id": "block.goddess_statue",
+  "name": "女神像",
+  "texture": "/assets/main_resources/blocks/TX Props.png",
+  "width": 96,
+  "height": 96,
+  "scale": 1.25,
+  "anchor": { "x": 0.5, "y": 1 },
+  "offset": { "x": 0, "y": 4 },
+  "animations": {
+    "IDLE": {
+      "DOWN": [
+        { "x": 416, "y": 0, "width": 96, "height": 96, "duration": 12 }
+      ]
+    }
+  }
+}

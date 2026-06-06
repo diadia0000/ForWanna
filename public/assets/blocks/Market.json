@@ -1,0 +1,24 @@
+{
+  "id": "block.market",
+  "texture": "/assets/main_resources/blocks/market.png",
+  "width": 544,
+  "height": 512,
+  "scale": 0.24,
+  "anchor": {
+    "x": 0.5,
+    "y": 1
+  },
+  "animations": {
+    "IDLE": {
+      "DOWN": [
+        {
+          "x": 0,
+          "y": 0,
+          "width": 544,
+          "height": 512,
+          "duration": 12
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,8 @@
+﻿{
+    "id":  "crystal",
+    "texture":  "/assets/main_resources/items/crystal.png",
+    "width":  64,
+    "height":  64,
+    "scale":  0.5
+}
+

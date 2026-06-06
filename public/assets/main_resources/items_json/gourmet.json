@@ -1,0 +1,8 @@
+﻿{
+    "id":  "gourmet",
+    "texture":  "/assets/main_resources/items/gourmet.png",
+    "width":  64,
+    "height":  64,
+    "scale":  0.5
+}
+

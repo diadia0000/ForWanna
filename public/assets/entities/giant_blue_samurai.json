@@ -1,0 +1,196 @@
+{
+    "id":  "monster.giant_blue_samurai",
+    "texture":  "/assets/main_resources/monster/GiantBlueSamurai/Walk.png",
+    "width":  96,
+    "height":  48,
+    "scale":  1.45,
+    "anchor":  {
+                   "x":  0.5,
+                   "y":  1
+               },
+    "offset":  {
+                   "x":  0,
+                   "y":  12
+               },
+    "ui":  {
+               "hpBarY":  12
+           },
+    "animations":  {
+                       "IDLE":  {
+                                    "DOWN":  [
+                                                 {
+                                                     "texture":  "/assets/main_resources/monster/GiantBlueSamurai/Idle.png",
+                                                     "x":  0,
+                                                     "y":  0,
+                                                     "width":  96,
+                                                     "height":  48,
+                                                     "duration":  6
+                                                 },
+                                                 {
+                                                     "texture":  "/assets/main_resources/monster/GiantBlueSamurai/Idle.png",
+                                                     "x":  96,
+                                                     "y":  0,
+                                                     "width":  96,
+                                                     "height":  48,
+                                                     "duration":  6
+                                                 },
+                                                 {
+                                                     "texture":  "/assets/main_resources/monster/GiantBlueSamurai/Idle.png",
+                                                     "x":  192,
+                                                     "y":  0,
+                                                     "width":  96,
+                                                     "height":  48,
+                                                     "duration":  6
+                                                 },
+                                                 {
+                                                     "texture":  "/assets/main_resources/monster/GiantBlueSamurai/Idle.png",
+                                                     "x":  288,
+                                                     "y":  0,
+                                                     "width":  96,
+                                                     "height":  48,
+                                                     "duration":  6
+                                                 },
+                                                 {
+                                                     "texture":  "/assets/main_resources/monster/GiantBlueSamurai/Idle.png",
+                                                     "x":  384,
+                                                     "y":  0,
+                                                     "width":  96,
+                                                     "height":  48,
+                                                     "duration":  6
+                                                 },
+                                                 {
+                                                     "texture":  "/assets/main_resources/monster/GiantBlueSamurai/Idle.png",
+                                                     "x":  480,
+                                                     "y":  0,
+                                                     "width":  96,
+                                                     "height":  48,
+                                                     "duration":  6
+                                                 }
+                                             ]
+                                },
+                       "MOVE":  {
+                                    "DOWN":  [
+                                                 {
+                                                     "texture":  "/assets/main_resources/monster/GiantBlueSamurai/Walk.png",
+                                                     "x":  0,
+                                                     "y":  0,
+                                                     "width":  96,
+                                                     "height":  48,
+                                                     "duration":  5
+                                                 },
+                                                 {
+                                                     "texture":  "/assets/main_resources/monster/GiantBlueSamurai/Walk.png",
+                                                     "x":  96,
+                                                     "y":  0,
+                                                     "width":  96,
+                                                     "height":  48,
+                                                     "duration":  5
+                                                 },
+                                                 {
+                                                     "texture":  "/assets/main_resources/monster/GiantBlueSamurai/Walk.png",
+                                                     "x":  192,
+                                                     "y":  0,
+                                                     "width":  96,
+                                                     "height":  48,
+                                                     "duration":  5
+                                                 },
+                                                 {
+                                                     "texture":  "/assets/main_resources/monster/GiantBlueSamurai/Walk.png",
+                                                     "x":  288,
+                                                     "y":  0,
+                                                     "width":  96,
+                                                     "height":  48,
+                                                     "duration":  5
+                                                 },
+                                                 {
+                                                     "texture":  "/assets/main_resources/monster/GiantBlueSamurai/Walk.png",
+                                                     "x":  384,
+                                                     "y":  0,
+                                                     "width":  96,
+                                                     "height":  48,
+                                                     "duration":  5
+                                                 },
+                                                 {
+                                                     "texture":  "/assets/main_resources/monster/GiantBlueSamurai/Walk.png",
+                                                     "x":  480,
+                                                     "y":  0,
+                                                     "width":  96,
+                                                     "height":  48,
+                                                     "duration":  5
+                                                 }
+                                             ]
+                                },
+                       "HIT":  {
+                                   "DOWN":  [
+                                                {
+                                                    "texture":  "/assets/main_resources/monster/GiantBlueSamurai/Hit.png",
+                                                    "x":  0,
+                                                    "y":  0,
+                                                    "width":  96,
+                                                    "height":  48,
+                                                    "duration":  4
+                                                },
+                                                {
+                                                    "texture":  "/assets/main_resources/monster/GiantBlueSamurai/Hit.png",
+                                                    "x":  96,
+                                                    "y":  0,
+                                                    "width":  96,
+                                                    "height":  48,
+                                                    "duration":  4
+                                                },
+                                                {
+                                                    "texture":  "/assets/main_resources/monster/GiantBlueSamurai/Hit.png",
+                                                    "x":  192,
+                                                    "y":  0,
+                                                    "width":  96,
+                                                    "height":  48,
+                                                    "duration":  4
+                                                },
+                                                {
+                                                    "texture":  "/assets/main_resources/monster/GiantBlueSamurai/Hit.png",
+                                                    "x":  288,
+                                                    "y":  0,
+                                                    "width":  96,
+                                                    "height":  48,
+                                                    "duration":  4
+                                                }
+                                            ]
+                               },
+                       "ATTACK":  {
+                                      "DOWN":  [
+                                                   {
+                                                       "texture":  "/assets/main_resources/monster/GiantBlueSamurai/AttackRight.png",
+                                                       "x":  0,
+                                                       "y":  0,
+                                                       "width":  96,
+                                                       "height":  96,
+                                                       "duration":  4
+                                                   },
+                                                   {
+                                                       "texture":  "/assets/main_resources/monster/GiantBlueSamurai/AttackRight.png",
+                                                       "x":  96,
+                                                       "y":  0,
+                                                       "width":  96,
+                                                       "height":  96,
+                                                       "duration":  4
+                                                   },
+                                                   {
+                                                       "texture":  "/assets/main_resources/monster/GiantBlueSamurai/AttackRight.png",
+                                                       "x":  192,
+                                                       "y":  0,
+                                                       "width":  96,
+                                                       "height":  96,
+                                                       "duration":  4
+                                                   },
+                                                   {
+                                                       "texture":  "/assets/main_resources/monster/GiantBlueSamurai/AttackRight.png",
+                                                       "x":  288,
+                                                       "y":  0,
+                                                       "width":  96,
+                                                       "height":  96,
+                                                       "duration":  4
+                                                   }
+                                               ]
+                                  }
+                   }
+}

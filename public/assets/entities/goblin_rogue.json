@@ -1,0 +1,156 @@
+{
+    "id":  "monster.goblin_rogue",
+    "texture":  "/assets/main_resources/monster/GoblinRogue/Run-Sheet.png",
+    "width":  64,
+    "height":  64,
+    "scale":  1.5,
+    "anchor":  {
+                   "x":  0.5,
+                   "y":  1
+               },
+    "offset":  {
+                   "x":  0,
+                   "y":  10
+               },
+    "ui":  {
+               "hpBarY":  12
+           },
+    "animations":  {
+                       "IDLE":  {
+                                    "DOWN":  [
+                                                 {
+                                                     "texture":  "/assets/main_resources/monster/GoblinRogue/Idle-Sheet.png",
+                                                     "x":  0,
+                                                     "y":  0,
+                                                     "width":  32,
+                                                     "height":  32,
+                                                     "duration":  9
+                                                 },
+                                                 {
+                                                     "texture":  "/assets/main_resources/monster/GoblinRogue/Idle-Sheet.png",
+                                                     "x":  32,
+                                                     "y":  0,
+                                                     "width":  32,
+                                                     "height":  32,
+                                                     "duration":  9
+                                                 },
+                                                 {
+                                                     "texture":  "/assets/main_resources/monster/GoblinRogue/Idle-Sheet.png",
+                                                     "x":  64,
+                                                     "y":  0,
+                                                     "width":  32,
+                                                     "height":  32,
+                                                     "duration":  9
+                                                 },
+                                                 {
+                                                     "texture":  "/assets/main_resources/monster/GoblinRogue/Idle-Sheet.png",
+                                                     "x":  96,
+                                                     "y":  0,
+                                                     "width":  32,
+                                                     "height":  32,
+                                                     "duration":  9
+                                                 }
+                                             ]
+                                },
+                       "MOVE":  {
+                                    "DOWN":  [
+                                                 {
+                                                     "texture":  "/assets/main_resources/monster/GoblinRogue/Run-Sheet.png",
+                                                     "x":  0,
+                                                     "y":  0,
+                                                     "width":  64,
+                                                     "height":  64,
+                                                     "duration":  5
+                                                 },
+                                                 {
+                                                     "texture":  "/assets/main_resources/monster/GoblinRogue/Run-Sheet.png",
+                                                     "x":  64,
+                                                     "y":  0,
+                                                     "width":  64,
+                                                     "height":  64,
+                                                     "duration":  5
+                                                 },
+                                                 {
+                                                     "texture":  "/assets/main_resources/monster/GoblinRogue/Run-Sheet.png",
+                                                     "x":  128,
+                                                     "y":  0,
+                                                     "width":  64,
+                                                     "height":  64,
+                                                     "duration":  5
+                                                 },
+                                                 {
+                                                     "texture":  "/assets/main_resources/monster/GoblinRogue/Run-Sheet.png",
+                                                     "x":  192,
+                                                     "y":  0,
+                                                     "width":  64,
+                                                     "height":  64,
+                                                     "duration":  5
+                                                 },
+                                                 {
+                                                     "texture":  "/assets/main_resources/monster/GoblinRogue/Run-Sheet.png",
+                                                     "x":  256,
+                                                     "y":  0,
+                                                     "width":  64,
+                                                     "height":  64,
+                                                     "duration":  5
+                                                 },
+                                                 {
+                                                     "texture":  "/assets/main_resources/monster/GoblinRogue/Run-Sheet.png",
+                                                     "x":  320,
+                                                     "y":  0,
+                                                     "width":  64,
+                                                     "height":  64,
+                                                     "duration":  5
+                                                 }
+                                             ]
+                                },
+                       "HIT":  {
+                                   "DOWN":  [
+                                                {
+                                                    "texture":  "/assets/main_resources/monster/GoblinRogue/Idle-Sheet.png",
+                                                    "x":  0,
+                                                    "y":  0,
+                                                    "width":  32,
+                                                    "height":  32,
+                                                    "duration":  4
+                                                },
+                                                {
+                                                    "texture":  "/assets/main_resources/monster/GoblinRogue/Idle-Sheet.png",
+                                                    "x":  32,
+                                                    "y":  0,
+                                                    "width":  32,
+                                                    "height":  32,
+                                                    "duration":  4
+                                                }
+                                            ]
+                               },
+                       "ATTACK":  {
+                                      "DOWN":  [
+                                                   {
+                                                       "texture":  "/assets/main_resources/monster/GoblinRogue/Run-Sheet.png",
+                                                       "x":  0,
+                                                       "y":  0,
+                                                       "width":  64,
+                                                       "height":  64,
+                                                       "duration":  3
+                                                   },
+                                                   {
+                                                       "texture":  "/assets/main_resources/monster/GoblinRogue/Run-Sheet.png",
+                                                       "x":  64,
+                                                       "y":  0,
+                                                       "width":  64,
+                                                       "height":  64,
+                                                       "duration":  3
+                                                   },
+                                                   {
+                                                       "texture":  "/assets/main_resources/monster/GoblinRogue/Run-Sheet.png",
+                                                       "x":  128,
+                                                       "y":  0,
+                                                       "width":  64,
+                                                       "height":  64,
+                                                       "duration":  3
+                                                   }
+                                               ]
+                                  }
+                   }
+}

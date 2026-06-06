@@ -1,0 +1,16 @@
+{
+  "id": "block.tower",
+  "texture": "/assets/main_resources/blocks/tower.png",
+  "width": 1024,
+  "height": 1024,
+  "scale": 0.15,
+  "anchor": { "x": 0.5, "y": 1 },
+  "offset": { "x": 0, "y": 36 },
+  "animations": {
+    "IDLE": {
+      "DOWN": [
+        { "x": 0, "y": 0, "width": 1024, "height": 1024, "duration": 12 }
+      ]
+    }
+  }
+}

@@ -1,0 +1,8 @@
+﻿{
+    "id":  "ingot",
+    "texture":  "/assets/main_resources/items/ingot.png",
+    "width":  64,
+    "height":  64,
+    "scale":  0.5
+}
+

@@ -1,0 +1,16 @@
+{
+  "id": "block.furnace",
+  "texture": "/assets/main_resources/blocks/Furnace.png",
+  "width": 32,
+  "height": 64,
+  "scale": 1.5,
+  "anchor": { "x": 0.5, "y": 1 },
+  "offset": { "x": 0, "y": 2 },
+  "animations": {
+    "IDLE": {
+      "DOWN": [
+        { "x": 0, "y": 192, "duration": 12 }
+      ]
+    }
+  }
+}

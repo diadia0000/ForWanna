@@ -1,0 +1,15 @@
+{
+  "id": "block.ice_trap",
+  "texture": "/assets/main_resources/blocks/ice_trap.png",
+  "width": 1024,
+  "height": 1024,
+  "scale": 0.046875,
+  "anchor": { "x": 0.5, "y": 1 },
+  "animations": {
+    "IDLE": {
+      "DOWN": [
+        { "x": 0, "y": 0, "width": 1024, "height": 1024, "duration": 12 }
+      ]
+    }
+  }
+}

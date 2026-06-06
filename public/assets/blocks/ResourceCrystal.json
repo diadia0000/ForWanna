@@ -1,0 +1,17 @@
+{
+  "id": "resource.crystal",
+  "texture": "/assets/main_resources/blocks/crystal.png",
+  "width": 1024,
+  "height": 1024,
+  "scale": 0.1,
+  "anchor": { "x": 0.5, "y": 1 },
+  "offset": { "x": 0, "y": 50 },
+  "ui": { "hpBarY": 25 },
+  "animations": {
+    "IDLE": {
+      "DOWN": [
+        { "x": 0, "y": 0, "duration": 12 }
+      ]
+    }
+  }
+}

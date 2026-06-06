@@ -1,0 +1,216 @@
+{
+    "id":  "monster.giant_slime",
+    "texture":  "/assets/main_resources/monster/GiantSlime/Jump.png",
+    "width":  62,
+    "height":  52,
+    "scale":  1,
+    "anchor":  {
+                   "x":  0.5,
+                   "y":  1
+               },
+    "offset":  {
+                   "x":  0,
+                   "y":  12
+               },
+    "ui":  {
+               "hpBarY":  20
+           },
+    "animations":  {
+                       "IDLE":  {
+                                    "DOWN":  [
+                                                 {
+                                                     "texture":  "/assets/main_resources/monster/GiantSlime/Idle.png",
+                                                     "x":  0,
+                                                     "y":  0,
+                                                     "width":  62,
+                                                     "height":  52,
+                                                     "duration":  7
+                                                 },
+                                                 {
+                                                     "texture":  "/assets/main_resources/monster/GiantSlime/Idle.png",
+                                                     "x":  62,
+                                                     "y":  0,
+                                                     "width":  62,
+                                                     "height":  52,
+                                                     "duration":  7
+                                                 },
+                                                 {
+                                                     "texture":  "/assets/main_resources/monster/GiantSlime/Idle.png",
+                                                     "x":  124,
+                                                     "y":  0,
+                                                     "width":  62,
+                                                     "height":  52,
+                                                     "duration":  7
+                                                 },
+                                                 {
+                                                     "texture":  "/assets/main_resources/monster/GiantSlime/Idle.png",
+                                                     "x":  186,
+                                                     "y":  0,
+                                                     "width":  62,
+                                                     "height":  52,
+                                                     "duration":  7
+                                                 },
+                                                 {
+                                                     "texture":  "/assets/main_resources/monster/GiantSlime/Idle.png",
+                                                     "x":  248,
+                                                     "y":  0,
+                                                     "width":  62,
+                                                     "height":  52,
+                                                     "duration":  7
+                                                 }
+                                             ]
+                                },
+                       "MOVE":  {
+                                    "DOWN":  [
+                                                 {
+                                                     "texture":  "/assets/main_resources/monster/GiantSlime/Jump.png",
+                                                     "x":  0,
+                                                     "y":  0,
+                                                     "width":  62,
+                                                     "height":  52,
+                                                     "duration":  6
+                                                 },
+                                                 {
+                                                     "texture":  "/assets/main_resources/monster/GiantSlime/Jump.png",
+                                                     "x":  62,
+                                                     "y":  0,
+                                                     "width":  62,
+                                                     "height":  52,
+                                                     "duration":  6
+                                                 },
+                                                 {
+                                                     "texture":  "/assets/main_resources/monster/GiantSlime/Jump.png",
+                                                     "x":  124,
+                                                     "y":  0,
+                                                     "width":  62,
+                                                     "height":  52,
+                                                     "duration":  6
+                                                 },
+                                                 {
+                                                     "texture":  "/assets/main_resources/monster/GiantSlime/Jump.png",
+                                                     "x":  186,
+                                                     "y":  0,
+                                                     "width":  62,
+                                                     "height":  52,
+                                                     "duration":  6
+                                                 },
+                                                 {
+                                                     "texture":  "/assets/main_resources/monster/GiantSlime/Jump.png",
+                                                     "x":  248,
+                                                     "y":  0,
+                                                     "width":  62,
+                                                     "height":  52,
+                                                     "duration":  6
+                                                 },
+                                                 {
+                                                     "texture":  "/assets/main_resources/monster/GiantSlime/Jump.png",
+                                                     "x":  310,
+                                                     "y":  0,
+                                                     "width":  62,
+                                                     "height":  52,
+                                                     "duration":  6
+                                                 },
+                                                 {
+                                                     "texture":  "/assets/main_resources/monster/GiantSlime/Jump.png",
+                                                     "x":  372,
+                                                     "y":  0,
+                                                     "width":  62,
+                                                     "height":  52,
+                                                     "duration":  6
+                                                 },
+                                                 {
+                                                     "texture":  "/assets/main_resources/monster/GiantSlime/Jump.png",
+                                                     "x":  434,
+                                                     "y":  0,
+                                                     "width":  62,
+                                                     "height":  52,
+                                                     "duration":  6
+                                                 },
+                                                 {
+                                                     "texture":  "/assets/main_resources/monster/GiantSlime/Jump.png",
+                                                     "x":  496,
+                                                     "y":  0,
+                                                     "width":  62,
+                                                     "height":  52,
+                                                     "duration":  6
+                                                 },
+                                                 {
+                                                     "texture":  "/assets/main_resources/monster/GiantSlime/Jump.png",
+                                                     "x":  558,
+                                                     "y":  0,
+                                                     "width":  62,
+                                                     "height":  52,
+                                                     "duration":  6
+                                                 },
+                                                 {
+                                                     "texture":  "/assets/main_resources/monster/GiantSlime/Jump.png",
+                                                     "x":  620,
+                                                     "y":  0,
+                                                     "width":  62,
+                                                     "height":  52,
+                                                     "duration":  6
+                                                 },
+                                                 {
+                                                     "texture":  "/assets/main_resources/monster/GiantSlime/Jump.png",
+                                                     "x":  682,
+                                                     "y":  0,
+                                                     "width":  62,
+                                                     "height":  52,
+                                                     "duration":  6
+                                                 },
+                                                 {
+                                                     "texture":  "/assets/main_resources/monster/GiantSlime/Jump.png",
+                                                     "x":  744,
+                                                     "y":  0,
+                                                     "width":  62,
+                                                     "height":  52,
+                                                     "duration":  6
+                                                 }
+                                             ]
+                                },
+                       "HIT":  {
+                                   "DOWN":  [
+                                                {
+                                                    "texture":  "/assets/main_resources/monster/GiantSlime/Hit.png",
+                                                    "x":  0,
+                                                    "y":  0,
+                                                    "width":  62,
+                                                    "height":  52,
+                                                    "duration":  5
+                                                },
+                                                {
+                                                    "texture":  "/assets/main_resources/monster/GiantSlime/Hit.png",
+                                                    "x":  62,
+                                                    "y":  0,
+                                                    "width":  62,
+                                                    "height":  52,
+                                                    "duration":  5
+                                                },
+                                                {
+                                                    "texture":  "/assets/main_resources/monster/GiantSlime/Hit.png",
+                                                    "x":  124,
+                                                    "y":  0,
+                                                    "width":  62,
+                                                    "height":  52,
+                                                    "duration":  5
+                                                },
+                                                {
+                                                    "texture":  "/assets/main_resources/monster/GiantSlime/Hit.png",
+                                                    "x":  186,
+                                                    "y":  0,
+                                                    "width":  62,
+                                                    "height":  52,
+                                                    "duration":  5
+                                                },
+                                                {
+                                                    "texture":  "/assets/main_resources/monster/GiantSlime/Hit.png",
+                                                    "x":  248,
+                                                    "y":  0,
+                                                    "width":  62,
+                                                    "height":  52,
+                                                    "duration":  5
+                                                }
+                                            ]
+                               }
+                   }
+}

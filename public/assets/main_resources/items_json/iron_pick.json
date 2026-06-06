@@ -1,0 +1,8 @@
+﻿{
+    "id":  "iron_pick",
+    "texture":  "/assets/main_resources/items/iron_pick.png",
+    "width":  64,
+    "height":  64,
+    "scale":  0.5
+}
+

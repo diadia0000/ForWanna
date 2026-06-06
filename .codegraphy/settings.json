@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "maxFiles": 1000,
+  "include": [
+    "**/*"
+  ],
+  "respectGitignore": true,
+  "showOrphans": true,
+  "filterPatterns": [
+    "*.py",
+    "**/*.py"
+  ],
+  "disabledCustomFilterPatterns": [],
+  "plugins": [
+    {
+      "package": "@codegraphy-dev/plugin-markdown"
+    }
+  ]
+}

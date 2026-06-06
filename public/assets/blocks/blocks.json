@@ -1,0 +1,19 @@
+{
+  "block.furnace": "/assets/blocks/Furnace.json",
+  "block.research_lab": "/assets/blocks/Workbench.json",
+  "block.market": "/assets/blocks/Market.json",
+  "block.goddess_statue": "/assets/blocks/GoddessStatue.json",
+  "block.tower": "/assets/blocks/Tower.json",
+  "block.fire_trap": "/assets/blocks/FireTrap.json",
+  "block.ice_trap": "/assets/blocks/IceTrap.json",
+  "resource.berry": "/assets/blocks/ResourceBerry.json",
+  "resource.tomato": "/assets/blocks/ResourceTomato.json",
+  "resource.purple_grape": "/assets/blocks/ResourcePurpleGrape.json",
+  "resource.onion": "/assets/blocks/ResourceOnion.json",
+  "resource.carrot": "/assets/blocks/ResourceCarrot.json",
+  "resource.pumpkin": "/assets/blocks/ResourcePumpkin.json",
+  "resource.watermelon": "/assets/blocks/ResourceWatermelon.json",
+  "resource.crystal": "/assets/blocks/ResourceCrystal.json",
+  "resource.fire_node": "/assets/blocks/ResourceFireNode.json",
+  "resource.ice_node": "/assets/blocks/ResourceIceNode.json"
+}

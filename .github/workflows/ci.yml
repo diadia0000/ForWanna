@@ -1,0 +1,29 @@
+name: CI
+
+# 進 dev / main 的 PR 都會跑型別檢查 + 測試。
+# 4 人各自的 local hook 設定可能不同，CI 是唯一保證壞型別/壞測試不會合進來的關卡。
+on:
+  pull_request:
+    branches: [dev, main]
+  push:
+    branches: [dev, main]
+
+jobs:
+  typecheck-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install deps
+        run: npm ci
+
+      - name: Type check
+        run: npx tsc --noEmit
+
+      - name: Unit tests
+        run: npm test

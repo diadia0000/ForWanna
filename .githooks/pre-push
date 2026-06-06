@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+# 共用 pre-push hook：push 前先跑 TypeScript 型別檢查，擋掉壞型別。
+# 啟用方式：bash scripts/setup-hooks.sh（會把 git core.hooksPath 指到 .githooks/）
+set -uo pipefail
+
+echo "🔍 pre-push: 跑 tsc --noEmit…"
+if npx tsc --noEmit; then
+  echo "✅ 型別檢查通過，允許 push"
+  exit 0
+else
+  echo "⚠️  有型別錯誤，已擋下 push。修好再試，或用 git push --no-verify 強制跳過。"
+  exit 1
+fi

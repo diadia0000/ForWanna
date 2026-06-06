@@ -1,0 +1,83 @@
+[
+  {
+    "id": 1200,
+    "name": "grass",
+    "texture_path": "/assets/main_resources/tiles/TilesetFloor.png",
+    "width": 16,
+    "height": 16,
+    "uv": { "x": 176, "y": 192 },
+    "walkable": true
+  },
+  {
+    "id": 1201,
+    "name": "grass",
+    "texture_path": "/assets/main_resources/tiles/TilesetFloor.png",
+    "width": 16,
+    "height": 16,
+    "uv": { "x": 192, "y": 192 },
+    "walkable": true
+  },
+  {
+    "id": 1202,
+    "name": "grass",
+    "texture_path": "/assets/main_resources/tiles/TilesetFloor.png",
+    "width": 16,
+    "height": 16,
+    "uv": { "x": 208, "y": 192 },
+    "walkable": true
+  },
+  {
+    "id": 1203,
+    "name": "grass",
+    "texture_path": "/assets/main_resources/tiles/TilesetFloor.png",
+    "width": 16,
+    "height": 16,
+    "uv": { "x": 224, "y": 192 },
+    "walkable": true
+  },
+  {
+    "id": 1204,
+    "name": "grass",
+    "texture_path": "/assets/main_resources/tiles/TilesetFloor.png",
+    "width": 16,
+    "height": 16,
+    "uv": { "x": 240, "y": 192 },
+    "walkable": true
+  },
+  {
+    "id": 2000,
+    "name": "sand",
+    "texture_path": "/assets/main_resources/tiles/floors-tiles.png",
+    "width": 16,
+    "height": 16,
+    "uv": { "x": 112, "y": 224 },
+    "walkable": true
+  },
+  {
+    "id": 2001,
+    "name": "stone",
+    "texture_path": "/assets/main_resources/tiles/PathAndObjects.png",
+    "width": 32,
+    "height": 32,
+    "uv": { "x": 32, "y": 32 },
+    "walkable": true
+  },
+  {
+    "id": 2002,
+    "name": "snow",
+    "texture_path": "/assets/main_resources/tiles/floors-tiles.png",
+    "width": 16,
+    "height": 16,
+    "uv": { "x": 0, "y": 352 },
+    "walkable": true
+  },
+  {
+    "id": 2003,
+    "name": "water",
+    "texture_path": "/assets/main_resources/tiles/water-tiles.png",
+    "width": 16,
+    "height": 16,
+    "uv": { "x": 0, "y": 192 },
+    "walkable": false
+  }
+]

@@ -1,0 +1,36 @@
+# Codex 設定範例 —— 從 .claude 轉換而來
+#
+# 用法：把需要的段落複製到 ~/.codex/config.toml（Codex 的全域設定在 home，
+# 不在專案內）。本檔只是範例/文件，不會被 Codex 自動讀取。
+#
+# 對應關係：
+#   .claude/settings.json   ->  ~/.codex/config.toml   （JSON -> TOML）
+#   .mcp.json / mcpServers  ->  [mcp_servers.*]         （本專案原本沒有 .mcp.json）
+#   .claude/agents/*.md     ->  .codex/agents/*.toml    （已轉換，見該目錄）
+
+# --- 一般設定（可選）-------------------------------------------------------
+# model = "gpt-5-codex"
+# model_reasoning_effort = "medium"
+# approval_policy = "on-request"     # untrusted / on-request / never
+# sandbox_mode = "workspace-write"   # read-only / workspace-write / danger-full-access
+
+# --- MCP servers -----------------------------------------------------------
+# 本專案的 codegraph 是「多 agent 防踩踏」核心工具（見 docs/mcp-tools.md 與
+# .claude/rules/codegraph-rules.md）。實際可用的啟動指令如下（需先安裝 codegraph
+# CLI 並在 PATH 上，驗證：codegraph -V）：
+#
+# [mcp_servers.codegraph]
+# command = "codegraph"
+# args = ["serve", "--mcp"]
+# startup_timeout_sec = 20
+#
+# 其他 docs/mcp-tools.md 提到的可選 server：
+# [mcp_servers.playwright]
+# command = "npx"
+# args = ["-y", "@playwright/mcp@latest"]
+
+# --- Hooks ----------------------------------------------------
+# 專案已建立 .codex/hooks.json 和 .codex/config.toml（啟用 hooks）
+# 如果你的全域設定也想啟用 hooks，取消下方註解：
+# [features]
+# codex_hooks = true

@@ -1,0 +1,8 @@
+﻿{
+    "id":  "carrot",
+    "texture":  "/assets/main_resources/items/carrot.png",
+    "width":  64,
+    "height":  64,
+    "scale":  0.5
+}
+

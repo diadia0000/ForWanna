@@ -1,0 +1,8 @@
+﻿{
+    "id":  "laser_orb",
+    "texture":  "/assets/main_resources/items/laser_orb.png",
+    "width":  64,
+    "height":  64,
+    "scale":  0.5
+}
+

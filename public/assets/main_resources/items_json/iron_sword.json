@@ -1,0 +1,8 @@
+﻿{
+    "id":  "iron_sword",
+    "texture":  "/assets/main_resources/items/iron_sword.png",
+    "width":  64,
+    "height":  64,
+    "scale":  0.5
+}
+

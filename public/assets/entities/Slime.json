@@ -1,0 +1,166 @@
+{
+  "id": "monster.slime",
+  "texture": "/assets/main_resources/monster/GiantSlime2/Jump.png",
+  "width": 62,
+  "height": 52,
+  "scale": 1,
+  "anchor": { "x": 0.5, "y": 0.9 },
+  "offset": { "x": 0, "y": 12 },
+  "ui": { "hpBarY": 20 },
+  "animations": {
+    "MOVE": {
+      "DOWN": [
+        { "x": 0, "y": 0, "duration": 6 },
+        { "x": 62, "y": 0, "duration": 6 },
+        { "x": 124, "y": 0, "duration": 6 },
+        { "x": 186, "y": 0, "duration": 6 },
+        { "x": 248, "y": 0, "duration": 6 },
+        { "x": 310, "y": 0, "duration": 6 },
+        { "x": 372, "y": 0, "duration": 6 },
+        { "x": 434, "y": 0, "duration": 6 },
+        { "x": 496, "y": 0, "duration": 6 },
+        { "x": 558, "y": 0, "duration": 6 },
+        { "x": 620, "y": 0, "duration": 6 },
+        { "x": 682, "y": 0, "duration": 6 },
+        { "x": 744, "y": 0, "duration": 6 }
+      ],
+      "RIGHT": [
+        { "x": 0, "y": 0, "duration": 6 },
+        { "x": 62, "y": 0, "duration": 6 },
+        { "x": 124, "y": 0, "duration": 6 },
+        { "x": 186, "y": 0, "duration": 6 },
+        { "x": 248, "y": 0, "duration": 6 },
+        { "x": 310, "y": 0, "duration": 6 },
+        { "x": 372, "y": 0, "duration": 6 },
+        { "x": 434, "y": 0, "duration": 6 },
+        { "x": 496, "y": 0, "duration": 6 },
+        { "x": 558, "y": 0, "duration": 6 },
+        { "x": 620, "y": 0, "duration": 6 },
+        { "x": 682, "y": 0, "duration": 6 },
+        { "x": 744, "y": 0, "duration": 6 }
+      ],
+      "UP": [
+        { "x": 0, "y": 0, "duration": 6 },
+        { "x": 62, "y": 0, "duration": 6 },
+        { "x": 124, "y": 0, "duration": 6 },
+        { "x": 186, "y": 0, "duration": 6 },
+        { "x": 248, "y": 0, "duration": 6 },
+        { "x": 310, "y": 0, "duration": 6 },
+        { "x": 372, "y": 0, "duration": 6 },
+        { "x": 434, "y": 0, "duration": 6 },
+        { "x": 496, "y": 0, "duration": 6 },
+        { "x": 558, "y": 0, "duration": 6 },
+        { "x": 620, "y": 0, "duration": 6 },
+        { "x": 682, "y": 0, "duration": 6 },
+        { "x": 744, "y": 0, "duration": 6 }
+      ],
+      "LEFT": [
+        { "x": 0, "y": 0, "duration": 6 },
+        { "x": 62, "y": 0, "duration": 6 },
+        { "x": 124, "y": 0, "duration": 6 },
+        { "x": 186, "y": 0, "duration": 6 },
+        { "x": 248, "y": 0, "duration": 6 },
+        { "x": 310, "y": 0, "duration": 6 },
+        { "x": 372, "y": 0, "duration": 6 },
+        { "x": 434, "y": 0, "duration": 6 },
+        { "x": 496, "y": 0, "duration": 6 },
+        { "x": 558, "y": 0, "duration": 6 },
+        { "x": 620, "y": 0, "duration": 6 },
+        { "x": 682, "y": 0, "duration": 6 },
+        { "x": 744, "y": 0, "duration": 6 }
+      ]
+    },
+    "IDLE": {
+      "DOWN": [
+        { "x": 0, "y": 0, "duration": 6 },
+        { "x": 62, "y": 0, "duration": 6 },
+        { "x": 124, "y": 0, "duration": 6 },
+        { "x": 186, "y": 0, "duration": 6 },
+        { "x": 248, "y": 0, "duration": 6 },
+        { "x": 310, "y": 0, "duration": 6 },
+        { "x": 372, "y": 0, "duration": 6 },
+        { "x": 434, "y": 0, "duration": 6 },
+        { "x": 496, "y": 0, "duration": 6 },
+        { "x": 558, "y": 0, "duration": 6 },
+        { "x": 620, "y": 0, "duration": 6 },
+        { "x": 682, "y": 0, "duration": 6 },
+        { "x": 744, "y": 0, "duration": 6 }
+      ],
+      "RIGHT": [
+        { "x": 0, "y": 0, "duration": 6 },
+        { "x": 62, "y": 0, "duration": 6 },
+        { "x": 124, "y": 0, "duration": 6 },
+        { "x": 186, "y": 0, "duration": 6 },
+        { "x": 248, "y": 0, "duration": 6 },
+        { "x": 310, "y": 0, "duration": 6 },
+        { "x": 372, "y": 0, "duration": 6 },
+        { "x": 434, "y": 0, "duration": 6 },
+        { "x": 496, "y": 0, "duration": 6 },
+        { "x": 558, "y": 0, "duration": 6 },
+        { "x": 620, "y": 0, "duration": 6 },
+        { "x": 682, "y": 0, "duration": 6 },
+        { "x": 744, "y": 0, "duration": 6 }
+      ],
+      "UP": [
+        { "x": 0, "y": 0, "duration": 6 },
+        { "x": 62, "y": 0, "duration": 6 },
+        { "x": 124, "y": 0, "duration": 6 },
+        { "x": 186, "y": 0, "duration": 6 },
+        { "x": 248, "y": 0, "duration": 6 },
+        { "x": 310, "y": 0, "duration": 6 },
+        { "x": 372, "y": 0, "duration": 6 },
+        { "x": 434, "y": 0, "duration": 6 },
+        { "x": 496, "y": 0, "duration": 6 },
+        { "x": 558, "y": 0, "duration": 6 },
+        { "x": 620, "y": 0, "duration": 6 },
+        { "x": 682, "y": 0, "duration": 6 },
+        { "x": 744, "y": 0, "duration": 6 }
+      ],
+      "LEFT": [
+        { "x": 0, "y": 0, "duration": 6 },
+        { "x": 62, "y": 0, "duration": 6 },
+        { "x": 124, "y": 0, "duration": 6 },
+        { "x": 186, "y": 0, "duration": 6 },
+        { "x": 248, "y": 0, "duration": 6 },
+        { "x": 310, "y": 0, "duration": 6 },
+        { "x": 372, "y": 0, "duration": 6 },
+        { "x": 434, "y": 0, "duration": 6 },
+        { "x": 496, "y": 0, "duration": 6 },
+        { "x": 558, "y": 0, "duration": 6 },
+        { "x": 620, "y": 0, "duration": 6 },
+        { "x": 682, "y": 0, "duration": 6 },
+        { "x": 744, "y": 0, "duration": 6 }
+      ]
+    },
+    "HIT": {
+      "DOWN": [
+        { "texture": "/assets/main_resources/monster/GiantSlime2/Hit.png", "x": 0, "y": 0, "duration": 5 },
+        { "texture": "/assets/main_resources/monster/GiantSlime2/Hit.png", "x": 62, "y": 0, "duration": 5 },
+        { "texture": "/assets/main_resources/monster/GiantSlime2/Hit.png", "x": 124, "y": 0, "duration": 5 },
+        { "texture": "/assets/main_resources/monster/GiantSlime2/Hit.png", "x": 186, "y": 0, "duration": 5 },
+        { "texture": "/assets/main_resources/monster/GiantSlime2/Hit.png", "x": 248, "y": 0, "duration": 5 }
+      ],
+      "RIGHT": [
+        { "texture": "/assets/main_resources/monster/GiantSlime2/Hit.png", "x": 0, "y": 0, "duration": 5 },
+        { "texture": "/assets/main_resources/monster/GiantSlime2/Hit.png", "x": 62, "y": 0, "duration": 5 },
+        { "texture": "/assets/main_resources/monster/GiantSlime2/Hit.png", "x": 124, "y": 0, "duration": 5 },
+        { "texture": "/assets/main_resources/monster/GiantSlime2/Hit.png", "x": 186, "y": 0, "duration": 5 },
+        { "texture": "/assets/main_resources/monster/GiantSlime2/Hit.png", "x": 248, "y": 0, "duration": 5 }
+      ],
+      "UP": [
+        { "texture": "/assets/main_resources/monster/GiantSlime2/Hit.png", "x": 0, "y": 0, "duration": 5 },
+        { "texture": "/assets/main_resources/monster/GiantSlime2/Hit.png", "x": 62, "y": 0, "duration": 5 },
+        { "texture": "/assets/main_resources/monster/GiantSlime2/Hit.png", "x": 124, "y": 0, "duration": 5 },
+        { "texture": "/assets/main_resources/monster/GiantSlime2/Hit.png", "x": 186, "y": 0, "duration": 5 },
+        { "texture": "/assets/main_resources/monster/GiantSlime2/Hit.png", "x": 248, "y": 0, "duration": 5 }
+      ],
+      "LEFT": [
+        { "texture": "/assets/main_resources/monster/GiantSlime2/Hit.png", "x": 0, "y": 0, "duration": 5 },
+        { "texture": "/assets/main_resources/monster/GiantSlime2/Hit.png", "x": 62, "y": 0, "duration": 5 },
+        { "texture": "/assets/main_resources/monster/GiantSlime2/Hit.png", "x": 124, "y": 0, "duration": 5 },
+        { "texture": "/assets/main_resources/monster/GiantSlime2/Hit.png", "x": 186, "y": 0, "duration": 5 },
+        { "texture": "/assets/main_resources/monster/GiantSlime2/Hit.png", "x": 248, "y": 0, "duration": 5 }
+      ]
+    }
+  }
+}

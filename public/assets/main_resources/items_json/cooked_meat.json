@@ -1,0 +1,8 @@
+﻿{
+    "id":  "cooked_meat",
+    "texture":  "/assets/main_resources/items/cooked_meat.png",
+    "width":  64,
+    "height":  64,
+    "scale":  0.5
+}
+

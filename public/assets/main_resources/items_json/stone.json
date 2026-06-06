@@ -1,0 +1,8 @@
+﻿{
+    "id":  "stone",
+    "texture":  "/assets/main_resources/items/stone.png",
+    "width":  64,
+    "height":  64,
+    "scale":  0.5
+}
+
