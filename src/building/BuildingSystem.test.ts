@@ -51,4 +51,16 @@ describe('BuildingSystem placement collision', () => {
     expect(system.canPlace('market', 48, 48, playerId)).toBe(false)
     expect(system.canPlace('market', 144, 96, playerId)).toBe(true)
   })
+
+  it('blocks placement inside the spawn protection zone', () => {
+    const system = new BuildingSystem({ addChild: vi.fn() } as any)
+    system.setSpawnPointGetter(() => ({ x: 480, y: 480 }))
+
+    // 直接蓋在重生點上 → 拒絕
+    expect(system.canPlace('market', 480, 480, playerId)).toBe(false)
+    // 邊緣壓到保護區（重生點 ±48px）→ 拒絕
+    expect(system.canPlace('market', 432, 432, playerId)).toBe(false)
+    // 離保護區夠遠 → 允許
+    expect(system.canPlace('market', 680, 480, playerId)).toBe(true)
+  })
 })

@@ -1254,6 +1254,12 @@ async function bootstrap() {
     return [...players.values()].map(p => ({ x: p.x, y: p.y }))
   })
 
+  // 注入重生點（建築不可蓋在重生點保護區，避免重生後卡死）
+  buildingSystem.setSpawnPointGetter(() => {
+    const w = GameStateManager_.getWorld() as any
+    return { x: w?.spawnX ?? WORLD_CONFIG.CENTER_X, y: w?.spawnY ?? WORLD_CONFIG.CENTER_Y }
+  })
+
   // ── 資源節點碰撞（樹/石頭/礦物阻擋玩家通過） ─────────────────
   const NODE_COLLIDE_R: Record<string, number> = {
     tree: 14, rock: 18, iron: 18, gold: 18, crystal: 12,
@@ -1371,14 +1377,22 @@ async function bootstrap() {
   // 追蹤重生冷卻中的玩家（避免重複觸發死亡）
   const deadPlayers = new Set<string>()
 
+  // Host 端：client 的持續移動輸入（edge-triggered，按下/放開才送一次）
+  const heldMoves = new Map<string, { dx: number; dy: number }>()
+  // Host 端：本 tick 內有移動的玩家，每 4 tick 合併成一則 state_delta 廣播
+  const dirtyMovedPlayers = new Set<string>()
+
   // 公用重生函式（host 呼叫後廣播；本地端也呼叫）
   function _respawnPlayer(playerId: string): void {
     // 若在遺跡內死亡，先離開遺跡，否則重生點是世界座標、人卻仍被當成在遺跡內，
     // 移動碰撞會用 dungeonScene.isFloor() 判定 → 整個卡住無法移動
     if (playerId === myPlayerId && inDungeon) _exitDungeon()
     const worldD = GameStateManager_.getWorld()
-    const spawnX = (worldD as any).spawnX ?? WORLD_CONFIG.CENTER_X
-    const spawnY = (worldD as any).spawnY ?? WORLD_CONFIG.CENTER_Y
+    // 重生點可能被建築等碰撞體蓋住 → 找最近的安全點，避免重生後卡死
+    const { x: spawnX, y: spawnY } = findSafeSpawn(
+      (worldD as any).spawnX ?? WORLD_CONFIG.CENTER_X,
+      (worldD as any).spawnY ?? WORLD_CONFIG.CENTER_Y,
+    )
     const pdR = GameStateManager_.getPlayer(playerId)
     let xpLost = 0
     if (pdR) {
@@ -1507,6 +1521,23 @@ async function bootstrap() {
     if (isBlockedByBuilding(center.x, center.y)) return true
     if (treasureSpawner.isBlockedByChest(center.x, center.y, PLAYER_COLLISION_RADIUS)) return true
     return false
+  }
+
+  // 重生/讀檔/加入時的安全落點：若指定點被建築等碰撞體佔據，
+  // 以 TILE_SIZE 為步長向外環狀搜尋最近的可站立位置
+  function findSafeSpawn(x: number, y: number): { x: number; y: number } {
+    if (!isMovementBlockedAt(x, y)) return { x, y }
+    for (let ring = 1; ring <= 8; ring++) {
+      for (let oy = -ring; oy <= ring; oy++) {
+        for (let ox = -ring; ox <= ring; ox++) {
+          if (Math.max(Math.abs(ox), Math.abs(oy)) !== ring) continue   // 只掃外圈
+          const nx = x + ox * TILE_SIZE
+          const ny = y + oy * TILE_SIZE
+          if (!isMovementBlockedAt(nx, ny)) return { x: nx, y: ny }
+        }
+      }
+    }
+    return { x, y }   // 8 圈內找不到（幾乎不可能）→ 維持原點
   }
 
   function getInteractionOrigin(me: Player): { x: number; y: number } {
@@ -2833,6 +2864,11 @@ async function bootstrap() {
     const pData = GameStateManager_.getPlayer(playerId)
     if (!pData) return
     applyCombatStats(pData)
+    // 加入位置（上次記錄或預設出生點）可能被建築蓋住 → 修正到最近安全點
+    // 在下方 sendTo state_full 之前修正，新玩家收到的就是正確座標
+    const joinSafe = findSafeSpawn(pData.x, pData.y)
+    pData.x = joinSafe.x
+    pData.y = joinSafe.y
     GameStateManager_.setPlayer(playerId, pData)
     const p = new Player(pData)
     players.set(playerId, p)
@@ -2855,6 +2891,7 @@ async function bootstrap() {
 
   // 玩家斷線
   EventBus.on('network:disconnected', ({ playerId }) => {
+    heldMoves.delete(playerId)
     players.get(playerId)?.destroy()
     players.delete(playerId)
     GameStateManager_.removePlayer(playerId)
@@ -2866,23 +2903,9 @@ async function bootstrap() {
     if (RoomManager.role !== 'host') return
 
     if (input.type === 'move') {
-      const player = players.get(playerId)
-      if (!player) return
-      let sdx = input.dx, sdy = input.dy
-      if (sdx !== 0 && isMovementBlockedAt(player.x + sdx * 10, player.y)) sdx = 0
-      // 水面碰撞
-      if (sdy !== 0 && isMovementBlockedAt(player.x, player.y + sdy * 10)) sdy = 0
-      // 資源節點碰撞（已在節點內則跳過，讓其逃脫）
-      // 建築碰撞（不能穿過建築）
-      if (sdx === 0 && sdy === 0) return
-      const move = normalizeMove(sdx, sdy)
-      player.applyInput({ type: 'move', dx: move.dx, dy: move.dy })
-      const tick = GameStateManager_.get().tick
-      NetworkHost.broadcast({
-        type: 'state_delta',
-        tick,
-        delta: { players: { [playerId]: { x: player.x, y: player.y } } },
-      })
+      // edge-triggered：client 只在方向改變時送一次，Host 在 GameLoop 內每 tick 持續套用
+      if (input.dx === 0 && input.dy === 0) heldMoves.delete(playerId)
+      else heldMoves.set(playerId, { dx: input.dx, dy: input.dy })
 
     } else if (input.type === 'build') {
       if (!buildingSystem.canPlace(input.buildingDefId, input.x, input.y, playerId)) return
@@ -3187,6 +3210,8 @@ async function bootstrap() {
   }, 1200)
 
   // ── Game Loop ──────────────────────────────────────────────
+  // Client 端最後送出的移動方向（edge-triggered：改變才送）
+  const lastSentMove = { dx: 0, dy: 0 }
   GameLoop.addCallback((_delta, tick) => {
     if (!myPlayerId) return
     if (!clientPlayerHydrationChecked) {
@@ -3205,6 +3230,8 @@ async function bootstrap() {
 
     const dx = (inputState.right ? 1 : 0) - (inputState.left ? 1 : 0)
     const dy = (inputState.down  ? 1 : 0) - (inputState.up   ? 1 : 0)
+    // 本幀實際套用的移動方向（client 端 edge-triggered 發送用；停止時為 0,0）
+    const frameMove = { dx: 0, dy: 0 }
 
     if (dx !== 0 || dy !== 0) {
       const mover = players.get(myPlayerId)
@@ -3243,10 +3270,7 @@ async function bootstrap() {
           const hostPlayer = players.get(myPlayerId)
           if (hostPlayer) {
             hostPlayer.applyInput(input)
-            NetworkHost.broadcast({
-              type: 'state_delta', tick,
-              delta: { players: { [myPlayerId]: { x: hostPlayer.x, y: hostPlayer.y } } },
-            })
+            dirtyMovedPlayers.add(myPlayerId)   // 每 4 tick 批次廣播（見下方 flush）
           }
         } else {
           const meC = players.get(myPlayerId)
@@ -3254,9 +3278,21 @@ async function bootstrap() {
             const predicted = prediction.predict(input, meC.x, meC.y, tick)
             meC.syncFromServer(predicted)
           }
-          NetworkClient.send({ type: 'input', playerId: myPlayerId, input, tick })
+          frameMove.dx = move.dx
+          frameMove.dy = move.dy
         }
       }
+    }
+
+    // Client 端：方向改變（含停止 → 0,0）才送 input，Host 會持續套用最後方向
+    if (RoomManager.role !== 'host'
+      && (frameMove.dx !== lastSentMove.dx || frameMove.dy !== lastSentMove.dy)) {
+      lastSentMove.dx = frameMove.dx
+      lastSentMove.dy = frameMove.dy
+      NetworkClient.send({
+        type: 'input', playerId: myPlayerId,
+        input: { type: 'move', dx: frameMove.dx, dy: frameMove.dy }, tick,
+      })
     }
 
     // 更新所有玩家動畫，並同步 zIndex 實現 Y 排序（2.5D 深度遮擋）
@@ -3300,6 +3336,34 @@ async function bootstrap() {
             fxLayer.spawnFloatingText(meD.x, meD.y - 55, t('game.killed'), 0xFF4444)
             setTimeout(() => _respawnPlayer(myPlayerId), 2000)
           }
+        })
+      }
+    }
+
+    // ── Host 端：套用 client 的持續移動輸入 + 批次廣播移動 ──────
+    if (RoomManager.role === 'host') {
+      heldMoves.forEach((mv, pid) => {
+        const player = players.get(pid)
+        if (!player) return
+        let sdx = mv.dx, sdy = mv.dy
+        if (sdx !== 0 && isMovementBlockedAt(player.x + sdx * 10, player.y)) sdx = 0
+        if (sdy !== 0 && isMovementBlockedAt(player.x, player.y + sdy * 10)) sdy = 0
+        if (sdx === 0 && sdy === 0) return
+        const move = normalizeMove(sdx, sdy)
+        player.applyInput({ type: 'move', dx: move.dx, dy: move.dy })
+        dirtyMovedPlayers.add(pid)
+      })
+      // 每 4 tick 把所有玩家移動合併成一則 state_delta（降低網路壓力）
+      if (tick % 4 === 0 && dirtyMovedPlayers.size > 0) {
+        const movedPlayers: Record<string, { x: number; y: number }> = {}
+        dirtyMovedPlayers.forEach(pid => {
+          const p = players.get(pid)
+          if (p) movedPlayers[pid] = { x: p.x, y: p.y }
+        })
+        dirtyMovedPlayers.clear()
+        NetworkHost.broadcast({
+          type: 'state_delta', tick,
+          delta: { players: movedPlayers },
         })
       }
     }
@@ -4004,18 +4068,17 @@ async function bootstrap() {
         )
       }
 
-      // 舊存檔座標可能在水上或被寶箱卡住（bug 遺留）→ 強制移回中心島
+      // 舊存檔座標可能在水上、被寶箱或建築卡住（bug 遺留）→ 強制移回中心島安全點
       {
         const safeX = (world as any).spawnX ?? WORLD_CONFIG.CENTER_X
         const safeY = (world as any).spawnY ?? WORLD_CONFIG.CENTER_Y
-        const blockedByWater = isBlockedByWaterAt(myData.x, myData.y)
-        const blockedByChest = treasureSpawner.isBlockedByChest(myData.x, myData.y, PLAYER_COLLISION_RADIUS)
         // 出界（座標落在新世界沒有的區塊 → getTileAt 回 null）也要移回中心，
         // 否則畫面四周沒有任何地塊會是一片空白
         const offMap = tileMap.getTileAt(myData.x, myData.y, world) == null
-        if (blockedByWater || blockedByChest || offMap) {
-          myData.x = safeX
-          myData.y = safeY
+        if (offMap || isMovementBlockedAt(myData.x, myData.y)) {
+          const safe = findSafeSpawn(safeX, safeY)
+          myData.x = safe.x
+          myData.y = safe.y
           GameStateManager_.setPlayer(myPlayerId, myData)
         }
       }
@@ -4179,10 +4242,18 @@ async function bootstrap() {
       for (const [playerId, delta] of Object.entries(msg.delta.players)) {
         const current = GameStateManager_.getPlayer(playerId)
         if (!current && !(delta as any)?.name) continue
+        // 高頻移動同步只帶 x/y → 跳過戰鬥屬性重算與 sprite 重指派（效能）
+        const positionOnly = !!current
+          && Object.keys(delta ?? {}).every(k => k === 'x' || k === 'y')
+        // 自己的位置由本地預測主導：移動中忽略純位置快照，避免被較舊的座標往回拉
+        if (positionOnly && playerId === myPlayerId && RoomManager.role !== 'host'
+          && (inputState.up || inputState.down || inputState.left || inputState.right)) {
+          continue
+        }
         const next = { ...(current ?? { id: playerId }), ...(delta ?? {}), id: playerId } as import('./types').PlayerData
-        applyCombatStats(next)
+        if (!positionOnly) applyCombatStats(next)
         GameStateManager_.setPlayer(playerId, next)
-        assignPlayerSprites()
+        if (!positionOnly) assignPlayerSprites()
         upsertPlayerSprite(GameStateManager_.getPlayer(playerId) ?? next)
         // Host 送回我自己的背包更新時，同步到本地 Inventory
         if (playerId === myPlayerId && delta?.inventory) {

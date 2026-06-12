@@ -16,6 +16,8 @@ export class BuildingSystem {
   private isWaterChecker: ((wx: number, wy: number) => boolean) | null = null
   /** 注入：取得所有玩家目前世界座標（用於放置碰撞檢查） */
   private _getPlayers: (() => Array<{ x: number; y: number }>) | null = null
+  /** 注入：取得重生點世界座標（建築不可蓋在重生點保護區內） */
+  private _getSpawnPoint: (() => { x: number; y: number }) | null = null
 
   /** buildingId -> name label（語言切換時重設文字） */
   private nameLabels: Map<string, { label: PIXI.Text; defId: string }> = new Map()
@@ -56,6 +58,11 @@ export class BuildingSystem {
   /** 注入玩家位置取得函數（main.ts 提供） */
   setPlayersGetter(fn: () => Array<{ x: number; y: number }>): void {
     this._getPlayers = fn
+  }
+
+  /** 注入重生點取得函數（main.ts 提供） */
+  setSpawnPointGetter(fn: () => { x: number; y: number }): void {
+    this._getSpawnPoint = fn
   }
 
   canPlace(buildingDefId: BuildingId, x: number, y: number, playerId: PlayerId): boolean {
@@ -104,6 +111,14 @@ export class BuildingSystem {
       return BuildingSystem.rectsOverlap(candidateRect, existingRect)
     })
     if (hasBuildingConflict) return false
+
+    // ── 重生點保護區：建築不可覆蓋重生點周圍（避免玩家重生後卡在建築裡） ──
+    if (this._getSpawnPoint) {
+      const sp = this._getSpawnPoint()
+      const M = TILE_SIZE   // 保護範圍：重生點向外 1 格
+      const spawnRect = { x: sp.x - M, y: sp.y - M, w: M * 2, h: M * 2 }
+      if (BuildingSystem.rectsOverlap(candidateRect, spawnRect)) return false
+    }
 
     // 檢查與資源節點重疊（建築不可放在樹木、礦石等之上）
     const buildingHalfW = def.size.x * TILE_SIZE / 2
